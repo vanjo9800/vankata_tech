@@ -1,21 +1,62 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="container" [class.example-is-mobile]="mobileQuery.matches">
+  <mat-toolbar color="primary" class="toolbar">
+    <button mat-icon-button (click)="snav.toggle()" class="logo-color">
+      <mat-icon>menu</mat-icon>
+    </button>
 
-<router-outlet></router-outlet>
+    <!-- This fills the remaining space of the current row -->
+    <span class="fill-remaining-space"></span>
+
+    <img src="assets/vankata_tech_logo.svg" alt="Vankata.tech" class="logo logo-color" />
+  </mat-toolbar>
+
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="56" class="logo-color-background">
+      <mat-nav-list>
+        <a mat-list-item class="dark-father" routerLink="." *ngFor="let option of menuOptions">{{option}}</a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="main-content">
+      <div class="main-background"></div>
+      <div class="main-page">
+        <div class="mat-display-3">Ivan's Homepage</div>
+        <div class="main-quote">
+          <blockquote>
+            <p><q>Older people sit down and ask, 'What is it?' but the boy asks, 'What can I do with it?'.</q></p>
+            <footer>Steve Jobs</footer>
+          </blockquote>
+        </div>
+        <div class="main-menu">
+          <div class="ripple-container dark-parent mat-elevation-z4" matRipple [matRippleColor]='"#bc1142"'>
+            <img src='assets/rpi_logo.png' alt="RPi Logo" class="menu-logo"/>
+            <h2>Raspberry Pi 64-bit</h2>
+            <div class="details">Find out more about my 64-bit experiments with the board...</div>
+          </div>
+          <div class="ripple-container dark-parent mat-elevation-z4" matRipple [matRippleColor]='"green"'>
+            <img src='assets/web_security_logo.png' alt="Web Security Logo" class="menu-logo"/>
+            <h2>Web Security</h2>
+            <div class="details">Read about some recent security issues that I have experienced, or read about...</div>
+          </div>
+          <div class="ripple-container dark-parent mat-elevation-z4" matRipple [matRippleColor]='"#03558f"'>
+            <img src='assets/research_logo.png' alt="Research Logo" class="menu-logo"/>
+            <h2>Research</h2>
+            <div class="details">Have a look at my research projects...</div>
+          </div>
+          <div class="ripple-container dark-parent mat-elevation-z4" matRipple [matRippleColor]='"white"'>
+            <img src='assets/about_me_logo.png' alt="About Me Logo" class="menu-logo"/>
+            <h2>About me</h2>
+            <div class="details">Find out more about me...</div>
+          </div>
+        </div>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+  <router-outlet></router-outlet>
+  <footer class="footer-theme">
+    This site is developed with <a href="https://angular.io/">Angular 8</a>.&nbsp;&nbsp;
+    © 2019 Vankata.tech
+  </footer>
+</div>
