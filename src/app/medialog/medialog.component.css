@@ -1,0 +1,13 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  padding: 5px;
+  margin: 5px;
+}

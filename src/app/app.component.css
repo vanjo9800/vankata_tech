@@ -152,18 +152,23 @@
   margin-top: 15px;
 }
 
+.button-text,
+.details {
+  color: white;
+}
+
 .footer-theme {
-    text-align: center;
-    color:white;
-    background: #20222d;
-    z-index: 2;
-    min-height: 30px;
-    vertical-align: middle;
-    display: inline-block;
+  text-align: center;
+  color: white;
+  background: #20222d;
+  z-index: 2;
+  min-height: 30px;
+  vertical-align: middle;
+  display: inline-block;
 }
 
 .footer-theme a:visited {
-    color: #999999;
+  color: #999999;
 }
 
 

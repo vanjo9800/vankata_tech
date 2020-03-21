@@ -1,0 +1,48 @@
+<h1 mat-dialog-title>About me</h1>
+<div mat-dialog-content>
+    <mat-card>
+        <mat-card-header>
+            <!-- <div mat-card-avatar class="example-header-image"></div> -->
+            <mat-card-title>Ivan Ivanov</mat-card-title>
+            <mat-card-subtitle>Software Engineer, Computer Science enthusiast</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <table>
+                <colgroup>
+                    <col span="1" style="width: 30%;">
+                    <col span="1" style="width: 70%;">
+                </colgroup>
+
+                <!-- Put <thead>, <tbody>, and <tr>'s here! -->
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="assets/meNew.jpg" alt="Photo of me">
+                        </td>
+                        <td>
+                            <p>
+                                Hi! I am Ivan Ivanov, a Computer Science enthusiast, currently doing my Bachelor degree
+                                in the University of Cambridge. This is my personal webpage where I try and upload some
+                                of my free time creations, so feel free to give me some feedback if you can!
+                                Below are GitHub account and my CV if you want to learn more about me.
+                                Thank you for visiting Vankata.Tech!
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button><a target="_blank" href="https://github.com/vanjo9800">GitHub</a></button>
+            <button mat-button><a target="_blank"
+                    href="https://www.linkedin.com/in/ivan-i-380565111/">LinkedIn</a></button>
+            <button mat-button><a target="_blank" href="docs/CVIvanIvanov.pdf">CV</a></button>
+            <button mat-button><a target="_top" href="mailto:ivan@vankata.tech">Email</a></button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="close()" cdkFocusInitial>Back</button>
+</div>

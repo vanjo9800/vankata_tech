@@ -14,10 +14,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { FormsModule } from '@angular/forms';
+import { NotyetdialogComponent } from './notyetdialog/notyetdialog.component';
+import { MedialogComponent } from './medialog/medialog.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NotyetdialogComponent,
+    MedialogComponent
   ],
   imports: [
     BrowserModule,
