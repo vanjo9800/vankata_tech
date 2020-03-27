@@ -5,7 +5,7 @@ npm install;
 npm audit fix;
 
 # Remove old ones
-rm ../website;
+rm -r ../website;
 
 cd repo;
 ng build --prod;
