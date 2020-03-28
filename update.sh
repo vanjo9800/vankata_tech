@@ -7,5 +7,5 @@ npm audit fix;
 # Remove old ones
 rm -r ../website;
 
-ng build --prod;
+npm run ng build --prod;
 mv dist/* ../;
