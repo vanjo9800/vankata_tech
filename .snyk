@@ -63,3 +63,8 @@ patch:
   'npm:tar:20151103':
     - component > component-resolver > component-downloader > decompress > tar:
         patched: '2020-03-24T14:34:42.182Z'
+  'npm:qs:20140806':
+    - component > superagent > qs:
+        patched: '2020-04-08T23:38:04.238Z'
+    - component > tiny-lr-fork > qs:
+        patched: '2020-04-08T23:38:04.238Z'
