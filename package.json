@@ -26,7 +26,7 @@
     "component": "^1.1.0",
     "material-design-icons": "^3.0.1",
     "rxjs": "~6.5.5",
-    "snyk": "^1.316.1",
+    "snyk": "^1.337.0",
     "tslib": "^1.11.2",
     "zone.js": "~0.10.2"
   },
